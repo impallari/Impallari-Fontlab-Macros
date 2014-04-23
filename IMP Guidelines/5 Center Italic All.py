@@ -16,6 +16,9 @@ f = fl.font
 # Find Angle
 angle = f.italic_angle
 
+if angle <= -1 :
+	angle = angle * -1
+
 for g in f.glyphs:
 
 	# Clear Local Guidelines

@@ -10,8 +10,8 @@
 
 # Variables
 # Tweak to fit your font
-metricsMax = 1030
-metricsMin = -220
+metricsMax = 900
+metricsMin = -300
 
 # Dependencies
 from robofab.world import CurrentFont, CurrentGlyph

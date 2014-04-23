@@ -15,7 +15,7 @@ f = CurrentFont()
 list = f.selection
 items = len(list)
 
-cadena = "/one @/one "
+cadena = "/espaciador @/espaciador "
 
 for a in list:
 	cadena = cadena + " /" + a + " @/" + a + " "

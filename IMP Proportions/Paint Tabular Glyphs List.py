@@ -2,7 +2,7 @@
 
 # Description:
 # Assuming that the default number style is tabular, 
-# select all other glyphs that should also be tabular
+# Paint all other glyphs that should also be tabular and half tabular
 
 # Credits:
 # Pablo Impallari
@@ -10,7 +10,6 @@
 
 
 full = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'dollar', 'sterling', 'Euro', 'yen', 'cent', 'numbersign', 'paragraph', 'section', 'degree', 'percent', 'slash', 'underscore', 'plus', 'minus', 'divide', 'equal', 'multiply', 'less', 'greater', 'plusminus', 'colonmonetary', 'uni20A9', 'franc', 'uni20A6', 'lira', 'uni20BA', 'uni20B9', 'florin', 'approxequal', 'notequal', 'lessequal', 'greaterequal'];
-
 half = ('quotedbl', 'quotesingle', 'period', 'comma', 'colon', 'semicolon', 'periodcentered', 'bar' );
 
 f=fl.font

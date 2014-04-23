@@ -1,4 +1,4 @@
-#FLM: Get Proportions Uppercase
+#FLM: Compare Proportions Uppercase
 
 # Description:
 # Compare Uppercase Proportions to other fonts

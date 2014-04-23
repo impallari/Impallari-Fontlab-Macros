@@ -6,7 +6,7 @@ from robofab.pens.filterPen import thresholdGlyph
 g = CurrentGlyph()
 
 # Set minimun Distance
-distance = 12
+distance = 20
 
 # Antes
 contornos_antes = len(g)

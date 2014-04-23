@@ -423,6 +423,6 @@ if f.has_key('z'):
 
 # --- Done! ---
 f.update()
-print "Donde. Enjoy!"
+print "Done. Enjoy!"
 print "Please review and tweek as needed"
 print "-------------------------------------------"

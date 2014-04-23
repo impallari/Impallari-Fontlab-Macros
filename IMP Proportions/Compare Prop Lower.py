@@ -1,7 +1,7 @@
-#FLM: Get Proportions Lowercase
+#FLM: Compare Proportions Lowercase
 
 # Description:
-# Compare Uppercase Proportions to other fonts
+# Compare Lowercase Proportions to other fonts
 
 # Credits:
 # Pablo Impallari

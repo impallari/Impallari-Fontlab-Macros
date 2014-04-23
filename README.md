@@ -1,4 +1,4 @@
 Impallari Fontlab Macros
 =================
 
-A bunch of Fontlab macros, use at your own risk :)
+A bunch of Fontlab macros, released under the APACHE License

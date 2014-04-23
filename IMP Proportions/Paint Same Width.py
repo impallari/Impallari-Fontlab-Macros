@@ -1,7 +1,7 @@
-#FLM: Paint Same Width
+#FLM: Paint Same Width as selected
 
 # Description:
-# Select all glyph of the same width
+# Paint all glyph of the same width
 
 # Credits:
 # Pablo Impallari

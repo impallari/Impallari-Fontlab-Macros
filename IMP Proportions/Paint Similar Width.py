@@ -1,7 +1,8 @@
-#FLM: Paint Narrower and Wider Glyphs
+#FLM: Paint slightly Narrower and Wider Glyphs
 
 # Description:
-# Paint Narrow Glyphs in Red and Wider Glyphs in Green
+# Paint slightly Narrow Glyphs in Red and slightly Wider Glyphs in Green
+# Select tolerance level in the variable below
 
 # Credits:
 # Pablo Impallari

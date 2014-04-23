@@ -7,11 +7,13 @@
 # By James Puckett and Jens Kutilek
 # http://typophile.com/node/84799
 
-
-
-# make a copy of the current font
 f = Font(fl.font)
 
+# Unmark glyphs first
+for glyphIndex in range(len(f.glyphs)):
+	fl.font[glyphIndex].mark = 0
+
+# make a copy of the current font
 for glyphIndex in range(len(f.glyphs)):
 	g = f[glyphIndex]
 	if (len(g.components) > 1) or (len(g) > 0 and len(g.components) > 0):
