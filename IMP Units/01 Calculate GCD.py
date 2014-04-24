@@ -11,6 +11,10 @@
 import fractions
 from robofab.world import CurrentFont
 
+# Clear Output windows
+from FL import *
+fl.output=""
+
 # Function
 def gcd(L):
     return reduce(fractions.gcd, L)

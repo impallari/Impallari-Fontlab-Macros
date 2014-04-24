@@ -20,7 +20,7 @@ fl.output=""
 # 18 Monotype
 # 36 Lumitype
 # 48 Berthold
-# 54 Photo typesetting and later Linotype
+# 54 Photo typesetting and later Linotype (18*3)
 # 72 (18*4)
 # 96 Later Monotype
 

@@ -1,4 +1,4 @@
-#FLM: Unitize All
+#FLM: Unitize Caps and Lowercase
 
 # Description:
 # Suggest values to fit glyphs into units
@@ -20,7 +20,7 @@ fl.output=""
 # 18 Monotype
 # 36 Lumitype
 # 48 Berthold
-# 54 Photo typesetting and later Linotype
+# 54 Photo typesetting and later Linotype (18*3)
 # 72 (18*4)
 # 96 Later Monotype
 
@@ -29,10 +29,8 @@ units = 36.0
 
 #scope
 upper = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
-lower = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
-numbers = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
-punct = ["period", "comma", "colon", "semicolon", "hyphen", "exclam", "question", "parenleft"]
-basic = punct + numbers + lower + upper
+lower = ["space", "period", "hyphen", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+basic = lower + upper
 
 f = CurrentFont()
 anchos = {}
