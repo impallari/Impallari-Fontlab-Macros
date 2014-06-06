@@ -1,7 +1,7 @@
 #FLM: Draw Pseudo Ogee
 
 # Description:
-# Create an Ogee shape
+# Create an Pseudo Ogee shape
 
 # Credits:
 # Pablo Impallari1
