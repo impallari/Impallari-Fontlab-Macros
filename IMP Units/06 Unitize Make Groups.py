@@ -24,7 +24,7 @@ fl.output=""
 # 72 (18*4)
 # 96 Later Monotype
 
-#Always add .0 - Ej 18.0 instead of 18
+#Always add .0 - Ej: 18.0 instead of 18
 units = 36.0
 
 #scope
@@ -38,9 +38,10 @@ f = CurrentFont()
 wider = 0
 
 for n in basic:
-	width = f[n].width
-	if wider < width:
-		wider = width
+	if f.has_key(n):
+		width = f[n].width
+		if wider < width:
+			wider = width
 		
 unit = wider / units
 
@@ -51,8 +52,9 @@ print ""
 for u in range(1, int(units+1)):
 	grupo = []
 	for g in basic:
-		g_fitted = int(round(f[g].width / unit))
-		if u == g_fitted:
-			grupo.append(f[g].name)
+		if f.has_key(g):
+			g_fitted = int(round(f[g].width / unit))
+			if u == g_fitted:
+				grupo.append(f[g].name)
 	if grupo:
 		print str(u) + " Units: %s" % ', '.join(map(str, grupo))
