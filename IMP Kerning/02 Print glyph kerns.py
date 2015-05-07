@@ -1,4 +1,4 @@
-#FLM: Print selected Glyph kerns
+#FLM: Print current Glyph kerning pairs
 
 # Description:
 # Print all Kerning Pairs for the selected glyph
@@ -10,13 +10,14 @@
 from FL import *
 fl.output=""
 
-# Display Kerning Pairs
+# Imports
 from robofab.world import *
+
+# Get Kerning Values
 f = CurrentFont()
 g = CurrentGlyph()
 kerning = f.kerning
 
-print "----------"
 print "Kerning Pairs for /" + str(g.name)
 print ""
 print "1st in Pair:"

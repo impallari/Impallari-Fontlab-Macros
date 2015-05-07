@@ -11,5 +11,5 @@ from robofab.world import CurrentFont
 
 font = CurrentFont()
 selection = font.selection
-selection.sort()
+# selection.sort()
 print "\n".join(selection)

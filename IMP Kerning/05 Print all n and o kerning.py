@@ -1,12 +1,17 @@
 #FLM: Print all n and o kerning pairs
 
 # Description:
-# Print all n and o kerning pairs
+# Print all n and o kerning pairs values
 
 # Credits:
 # Pablo Impallari
 
+# Dependencies
 from robofab.world import CurrentFont
+
+# Clear Output windows
+from FL import *
+fl.output=""
 
 f = CurrentFont()
 kerning = f.kerning

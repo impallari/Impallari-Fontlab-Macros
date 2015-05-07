@@ -1,4 +1,4 @@
-#FLM: Combinations Generator - Generates TXT newline separated
+#FLM: Selected Glyphs Combinations Generator - Generates TXT newline separated
 
 # Description:
 # Generates a txt file containing all combinations of the selected glyphs
