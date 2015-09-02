@@ -1,4 +1,4 @@
-#FLM: Unitize Caps
+#FLM: Unitize current font
 
 # Description:
 # Suggest values to fit glyphs into units
@@ -29,7 +29,11 @@ units = 36.0
 
 #scope
 upper = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
-basic = upper
+lower = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+numbers = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
+punct = ["space", "period", "comma", "colon", "semicolon", "hyphen"]
+#basic = lower + upper + punct + numbers
+basic = lower + upper + punct
 
 f = CurrentFont()
 anchos = {}
@@ -44,10 +48,13 @@ for n in basic:
 		
 unit = wider / units
 
-print "%d Units of %d (%.2f) points each" % (units, round(unit), unit)
+print "Fitted in %d Units of %d UPM points each (%.2f)" % (units, round(unit), unit)
 
 print ""
 print "Unitized"
 for key, value in sorted(anchos.iteritems(), key=lambda (k,v): (v,k)):
 	unitized = value / unit
-	print "%s: %s - %d units (%.2f)" % (key, value, round(unitized), unitized)
+	#Detailed
+	# print "%s: %s - %d units (%.2f)" % (key, value, round(unitized), unitized)
+	#Short
+	print "%s: %d units" % (key, round(unitized))

@@ -1,55 +1,55 @@
-#FLM: Make Units Groups
+#FLM: Calculate H-based units for Current Font
 
 # Description:
-# Suggest values to fit glyphs into units, and present them into groups
+# Unitize a font based on the H width
 
 # Credits:
 # Pablo Impallari
 # http://www.impallari.com
 
-# Dependencies
-import operator
-from robofab.world import CurrentFont
-
-# Clear Output windows
-from FL import *
-fl.output=""
-
-# Typical Units
-# 11 and 12 IBM Executive Typewriter
-# 18 Monotype
-# 36 Lumitype
-# 48 Berthold
-# 54 Photo typesetting and later Linotype (18*3)
-# 72 (18*4)
-# 96 Later Monotype
-
-#Always add .0 - Ej: 18.0 instead of 18
-units = 36.0
+# In how many units do you want to divide your lowercase n
+# Always add .0 at the end !!!!
+ngrid = 40.0
 
 #scope
 upper = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
 lower = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
 numbers = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
 punct = ["space", "period", "hyphen"]
-basic = punct + lower + upper + numbers
+# basic = lower + upper + punct + numbers
+basic = upper
 
+# Clear Output windows
+from FL import *
+fl.output=""
+
+# Dependencies
+from robofab.world import CurrentFont
+from decimal import *
+
+# Get Current font
 f = CurrentFont()
+
+# Calculate Unit Value
+unit = f['H'].width / ngrid
+
+# Find the Wider Glyph
 wider = 0
 
-for n in basic:
-	if f.has_key(n):
-		width = f[n].width
+for g in basic:
+	if f.has_key(g):
+		width = f[g].width
 		if wider < width:
 			wider = width
 		
-unit = wider / units
+maxunits = wider / unit
 
 print str(f.info.familyName) + ' ' + str(f.info.styleName)
-print "Fitted into a %d Units system (%d points per unit)" % (units, round(unit))
+# print "Fitted into a %d Units system (%d points per unit)" % (maxunits, round(unit))
+print str(ngrid) + " H-units, " + str(unit) + " each"
 print ""
 
-for u in range(1, int(units+1)):
+for u in range(1, int(maxunits+2)):
 	grupo = []
 	for g in basic:
 		if f.has_key(g):
@@ -58,3 +58,12 @@ for u in range(1, int(units+1)):
 				grupo.append(f[g].name)
 	if grupo:
 		print str(u) + " Units: %s" % ', '.join(map(str, grupo))
+	else:
+		print str(u) + " Units: "
+
+
+
+
+
+
+
