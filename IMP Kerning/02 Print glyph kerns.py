@@ -3,6 +3,9 @@
 # Description:
 # Print all Kerning Pairs for the selected glyph
 
+# To-do:
+# It only report main pairs, not fully expanded if the font uses classes
+
 # Credits:
 # Pablo Impallari
 

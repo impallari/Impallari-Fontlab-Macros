@@ -25,7 +25,7 @@ fl.output=""
 # 96 Later Monotype
 
 #Always add .0 - Ej 18.0 instead of 18
-units = 36.0
+units = 18.0
 
 #scope
 upper = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]

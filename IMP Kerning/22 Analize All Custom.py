@@ -4,6 +4,9 @@
 # Count the occurence of kerning pairs across all open fonts
 # But only for the glyphs listed in the "myglyphs" variable
 
+# To-do:
+# It only report main pairs, not fully expanded if the font uses classes
+
 # Credits:
 # Pablo Impallari1
 # http://www.impallari.com

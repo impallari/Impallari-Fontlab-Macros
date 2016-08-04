@@ -1,7 +1,7 @@
-#FLM: Make Units Groups
+#FLM: Make n-based Groups
 
 # Description:
-# Suggest values to fit glyphs into units, and present them into groups
+# Suggest values to fit glyphs into n-based units, and present them into groups
 
 # Credits:
 # Pablo Impallari
@@ -15,17 +15,8 @@ from robofab.world import CurrentFont
 from FL import *
 fl.output=""
 
-# Typical Units 
-# 11 and 12 IBM Executive Typewriter
-# 18 Monotype
-# 36 Lumitype
-# 48 Berthold
-# 54 Photo typesetting and later Linotype (18*3)
-# 72 (18*4)
-# 96 Later Monotype
-
 #Always add .0 - Ej: 18.0 instead of 18
-units = 9.0
+units = 32.0
 
 #scope
 upper = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
@@ -33,9 +24,12 @@ lower = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "
 numbers = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
 punct = ["space", "period", "hyphen"]
 # basic = lower + upper + punct + numbers
-basic = lower + upper
+basic = lower
 
 f = CurrentFont()
+
+unit = f['n'].width / units
+
 wider = 0
 
 for n in basic:
@@ -43,14 +37,15 @@ for n in basic:
 		width = f[n].width
 		if wider < width:
 			wider = width
-		
-unit = wider / units
+			
+total = wider / unit
 
 print str(f.info.familyName) + ' ' + str(f.info.styleName)
-print "Fitted into a %d Units system (%d points per unit)" % (units, round(unit))
+#print "Fitted into a %d Units system (%d points per unit)" % (total, round(unit))
+print str(units) + " n-units, " + str(unit) + " each"
 print ""
 
-for u in range(1, int(units+1)):
+for u in range(1, int(total+2)):
 	grupo = []
 	for g in basic:
 		if f.has_key(g):

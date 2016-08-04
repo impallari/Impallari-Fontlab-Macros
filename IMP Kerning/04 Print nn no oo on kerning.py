@@ -3,6 +3,9 @@
 # Description:
 # Print nn no oo on kerning pairs values
 
+# To-do:
+# It only report main pairs, not fully expanded if the font uses classes
+
 # Credits:
 # Pablo Impallari
 

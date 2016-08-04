@@ -3,6 +3,9 @@
 # Description:
 # Export a list of all kerning pairs surrounded by nononon For further inspection
 
+# To-do:
+# It only report main pairs, not fully expanded if the font uses classes
+
 # Dependencies
 from robofab.world import CurrentFont
 import os.path

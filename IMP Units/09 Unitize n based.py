@@ -13,11 +13,11 @@ ngrid = 32.0
 
 #scope
 upper = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
-lower = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+lower = ["space", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
 numbers = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
-punct = ["space", "period", "hyphen"]
+punct = ["period", "hyphen"]
 # basic = lower + upper + punct + numbers
-basic = upper + lower + punct
+basic = lower
 
 # Clear Output windows
 from FL import *

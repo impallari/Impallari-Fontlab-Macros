@@ -5,6 +5,10 @@
 # Saves two TXT files
 # Contents of those filess can be copy-pasted into the specimens tool
 
+# To-do:
+# It only report main pairs, not fully expanded if the font uses classes
+# Better to run it in a copy of your font, having your kerning manually expanded
+
 # Credits:
 # Pablo Impallari
 # http://www.impallari.com

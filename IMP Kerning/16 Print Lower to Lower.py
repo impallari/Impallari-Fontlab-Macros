@@ -3,6 +3,9 @@
 # Description:
 # Print all lower to lower kerning pairs
 
+# To-do:
+# It only report main pairs, not fully expanded if the font uses classes
+
 # Credits:
 # Pablo Impallari
 

@@ -19,6 +19,10 @@ angle = f.italic_angle
 if angle <= -1 :
 	angle = angle * -1
 
+#Hardcoded Angle and Shift
+angle = 13.5
+shift = 54
+
 for g in f.glyphs:
 
 	# Clear Local Guidelines
@@ -29,9 +33,9 @@ for g in f.glyphs:
 	centro = g.width / 2
 
 	# Place Guideline
-	g.vguides.append(Guide(0, angle))
-	g.vguides.append(Guide(centro, angle))
-	g.vguides.append(Guide(g.width, angle))
+	g.vguides.append(Guide(0-shift, angle))
+	g.vguides.append(Guide(centro-shift, angle))
+	g.vguides.append(Guide(g.width-shift, angle))
 	
 # Update font
 fl.UpdateGlyph()

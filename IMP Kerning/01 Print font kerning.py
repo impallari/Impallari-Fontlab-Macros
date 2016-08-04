@@ -3,6 +3,9 @@
 # Description:
 # Print all Kerning Pairs for the current font
 
+# To-do:
+# It only report main pairs, not fully expanded if the font uses classes
+
 # Dependencies
 from robofab.world import CurrentFont
 

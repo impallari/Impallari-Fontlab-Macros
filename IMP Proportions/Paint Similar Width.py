@@ -1,19 +1,22 @@
 #FLM: Paint slightly Narrower and Wider Glyphs
 
 # Description:
-# Paint slightly Narrow Glyphs in Red and slightly Wider Glyphs in Green
+# Select one glyph, and the macro will
+# Paint slightly Narrow glyphs in Cyan
+# Paint same width in Green
+# Paint slightly Wider glyphs in Red
 # Select tolerance level in the variable below
 
 # Credits:
 # Pablo Impallari
 # http://www.impallari.com
 
+tolerancia = 30;
+
 from robofab.world import CurrentFont
 from robofab.interface.all.dialogs import Message
 f = CurrentFont()
 glyphs = f.glyphs
-
-tolerancia = 93;
 
 # Se fija que haya 1 solo seleccionado y toma el ancho del mismo
 if fl.count_selected != 1:
